@@ -5,11 +5,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle mobile menu
 
   return (
-    <header className='flex justify-between items-center p-6 relative'>
+    <header className='flex justify-between items-center p-6 relative border-b border-gray-100'>
 
       {/* Left section: email icon and address (email hides when mobile menu opens) */}
       <div className='flex items-center gap-2'>
-        <span className='p-1 bg-gray-50/80 rounded-full text-black'>
+        <span className='p-1 bg-gray-700/90 rounded-full text-white'>
           <IoMailSharp />
         </span>
         <span className={`${isMenuOpen ? 'hidden' : 'block'}`}>
