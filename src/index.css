@@ -1,1 +1,26 @@
 @import "tailwindcss";
+/* Imports all default TailwindCSS styles */
+
+/* Creating a custom utility class */
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 20s infinite;
+    /* Applies the "marquee" animation that lasts 20 seconds and loops infinitely */
+  }
+}
+
+/* Defining the marquee keyframes animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+    /* Starts at the normal position (no horizontal shift) */
+  }
+  50% {
+    transform: translateX(-50%);
+    /* At halfway, it moves 50% to the left */
+  }
+  100% {
+    transform: translateX(90%);
+    /* Ends by moving 90% to the right — this is a bit unusual */
+  }
+}
